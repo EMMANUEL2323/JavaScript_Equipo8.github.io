@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 9 - Informaci&oacutae;n sobre cadenas</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+<script type="text/javascript">
+function info(cadena) {
+
+  var resultado = "La cadena \""+cadena+"\" ";
+
+  // Comprobar mayúsculas y minúsculas
+  if(cadena == cadena.toUpperCase())
+     resultado += " está formada sólo por mayúsculas";
+  else if(cadena == cadena.toLowerCase())
+          resultado += " está formada sólo por minúsculas";
+      else
+           resultado += " está formada por mayúsculas y minúsculas";
+return resultado;
+}
+
+alert(info("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
+alert(info("En un lugar de la mancha..."));
+alert(info("aprendiendo javascript..."));
+</script>
+</head>
+
+<body>
+</body>
+</html>

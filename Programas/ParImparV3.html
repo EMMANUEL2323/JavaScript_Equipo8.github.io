@@ -1,0 +1,50 @@
+<!DOCTYPE >
+<head>
+<title>Funciones básicas</title>  
+
+</head>  
+<body>
+
+  <h1>Programa que verifica si un n&uacute;mero es par versi&oacute;n 3</h1>
+
+    <link rel="stylesheet" type="text/css" href="css/fondo2.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+
+  <form >
+     <label >Introduce el numero</label>
+     <input type="text"   id="num" name="numero" value="">
+     <button type="button" onclick="esPar(num.value)">Verificar</button>
+     <!--
+       <button type="button" onclick="esPar(numero.value)">Verificar</button>
+     -->
+     <button type="button" onclick="nuevo()">Limpiar</button>
+
+  </form>
+
+
+<script type="text/javascript">
+  function nuevo(){
+    parrafo = document.getElementsByTagName('p')[0];
+    parrafo.parentNode.removeChild(parrafo);
+
+  }
+    function esPar(numero){
+       var resultado = parImpar(numero);
+       parrafo = document.createElement("p");
+       contenido = document.createTextNode("El número "+numero+" es "+resultado);  
+       parrafo.appendChild(contenido);
+       document.body.appendChild(parrafo);
+    }
+
+function parImpar(numero) {
+      if(numero % 2 == 0)  return "par";
+      else return "impar";
+ }
+</script>
+</body>
+</html>

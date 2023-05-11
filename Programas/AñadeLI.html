@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar elementos</title>
+
+<script type="text/javascript">
+
+function modifica(tipo) {
+ 
+
+lista = document.getElementById("lista");
+switch(tipo){
+case 'D':    //Agrega elemento mediante DOM
+            var elemento = document.createElement("li");
+            var texto = document.createTextNode("Nuevo DOM");
+            elemento.appendChild(texto);
+            lista.appendChild(elemento);
+            break;
+case 'H': //Agrega elemento mediante HTML
+             var nuevoElemento = "<li>Nuevo HTML</li>";
+            lista.innerHTML = lista.innerHTML + nuevoElemento;
+            break;
+default:  //Elimina elemento mediante DOM
+            alert("Elimina");
+            elemento_li = document.getElementsByTagName("li");
+            lista.removeChild(elemento_li[ elemento_li.length-1]);
+  }
+}
+</script>
+</head>
+
+<body>
+
+<ul id="lista">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetuer adipiscing elit</li>
+  <li>Sed mattis enim vitae orci</li>
+  <li>Phasellus libero</li>
+  <li>Maecenas nisl arcu</li>
+</ul>
+
+<input type="button" value="Agrega elemento DOM " onclick="modifica('D');">
+<input type="button" value="Agrega elemento HTML " onclick="modifica('H');">
+<input type="button" value="Elimina elemento " onclick="modifica('R');">
+</body>
+</html>

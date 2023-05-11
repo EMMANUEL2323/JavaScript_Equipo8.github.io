@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AM">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+<title>Control submit por evento formulario</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo10.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<script type="text/javascript">
+		function valida(campo){
+			var bRet = false;
+			if (campo.value == "")
+				document.write("Faltan datos");
+			else 	if (!campo.value.match(/^[A-Z]{3,4}[0-9]{6}[A-Z]{3}[0-9]{0,2}$/))
+            		document.write("No tiene formato de RFC");
+				else
+					bRet = true;
+			return bRet;
+		}
+	</script>
+	<form>
+		 CURP <input type="text" name="txtRFC" maxlength="13" size="15"/>
+		<br/>
+		<input type="submit" onClick="valida(txtRFC);" value="Ok"/>
+	</form>
+</body>
+</html>

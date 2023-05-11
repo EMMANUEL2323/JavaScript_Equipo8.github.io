@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 13 - DOM b&aacute;sico y atributos HTML</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo4.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+<script type="text/javascript">
+
+
+var contador=3;
+
+function anade() {
+
+  var lista = document.getElementById("lista");
+  var elemento = document.createElement("li");
+  var nuevoElemento = "<li>Elemento "+(++contador)+"</li>";
+  lista.innerHTML = lista.innerHTML + nuevoElemento;
+}
+
+</script>
+</head>
+
+<body>
+
+<ul id="lista">
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+  <li>Elemento 3</li>
+</ul>
+
+<input type="button" value="Añadir elemento" onclick="anade();">
+
+</body>
+</html>

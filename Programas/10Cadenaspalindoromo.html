@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 10 - Detección de pal&iacute;ndromos</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+<script type="text/javascript">
+function palindromo(cadena) {
+
+  var resultado = "La cadena \""+cadena+"\" \n";
+
+  // Pasar a minusculas la cadena
+  var cadenaOriginal = cadena.toLowerCase();
+
+  // Convertir la cadena en un array
+  var letrasEspacios = cadenaOriginal.split("");
+
+  // Eliminar los espacios en blanco (este paso es demasiado largo ya que no se utiliza la funcion "replace")
+  var cadenaSinEspacios = "";
+  for(i in letrasEspacios)
+    if(letrasEspacios[i] != " ")
+          cadenaSinEspacios += letrasEspacios[i];
+
+  var letras = cadenaSinEspacios.split("");
+  var letrasReves = cadenaSinEspacios.split("").reverse();
+
+  // Este paso tambien es muy largo porque no se utiliza la sentencia "break"
+  var iguales = true;
+  for(i in letras)
+    if(letras[i] != letrasReves[i])
+         iguales = false;
+
+
+  if(iguales)
+    resultado += " es un palíndromo";
+  else
+    resultado += " no es un palíndromo";
+  return resultado;
+}
+
+alert(palindromo("La ruta nos aporto otro paso natural"));
+alert(palindromo("Esta frase no se parece a ningun palindromo"));
+</script>
+</head>
+
+<body>
+</body>
+</html>

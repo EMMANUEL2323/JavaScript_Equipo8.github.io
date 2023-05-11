@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 12 - DOM básico y atributos CSS</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo2.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+<style type="text/css">
+      .oculto { display: none; }
+      .visible { display: inline; }
+</style>
+
+<script type="text/javascript">
+function muestra() {
+  var elemento = document.getElementById("adicional");
+  elemento.className = "visible";
+
+  var enlace = document.getElementById("enlace");
+  enlace.className = "visible";
+
+  var enlace1 = document.getElementById("enlace1");
+  enlace.className = "oculto";
+
+}
+
+function oculta() {
+  var elemento = document.getElementById("adicional");
+  elemento.className = "oculto";
+
+  var enlace = document.getElementById("enlace");
+  enlace.className = "oculto";
+
+  var enlace1 = document.getElementById("enlace1");
+  enlace.className = "visible";
+
+}
+</script>
+</head>
+
+<body>
+
+<p class="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+  <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+    Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.
+    <a id="enlace1"  href="#" onclick="oculta()">ocultar</a><br>
+  </span>
+</p>
+<a id="enlace" href="#" onclick="muestra()">Seguir leyendo</a><br>
+</body>
+</html>

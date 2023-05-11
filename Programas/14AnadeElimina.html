@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Control submit por evento formulario</title>
+
+<link rel="stylesheet" type="text/css" href="css/fondo3.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+		<form>
+		<table id="tblUno">
+			<tr>
+				<th>Columna 1</th>
+				<th>Columna 2</th>
+			</tr>
+		</table>
+		<input type="button" value="Agregar" onclick = "agregaLinea();"/>
+		<br/>
+		<input type="button" value="Eliminar" onclick = "eliminaLinea();"/>
+	</form>
+
+
+	<script type="text/javascript">
+		function agregaLinea(){
+			var oTbl = document.getElementById("tblUno");
+			var oLin = oTbl.insertRow(-1);
+			var oCelda1 = oLin.insertCell(0);
+			var oCelda2 = oLin.insertCell(1);
+			var oCelda3 = oLin.insertCell(2);
+
+
+			oCelda1.innerHTML = "Celda";
+			oCelda2.innerHTML = 'Texto y campo ' +'<input type="text" name="campo"/>';
+oCelda3.innerHTML ="mmmmm"
+		}
+
+		function eliminaLinea(){
+			var oTbl = document.getElementById("tblUno");
+			oTbl.deleteRow(-1);
+		}
+	</script>
+</body>
+</html>

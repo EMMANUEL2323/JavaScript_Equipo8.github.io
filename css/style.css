@@ -1,0 +1,93 @@
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    /* --fuentePrincipal: font-family: 'Roboto', sans-serif; */
+    
+    /* Recuerda que al importar un tipo de letra no debes poner font-family */
+    --fuentePrincipal:'Ysabeau', sans-serif;; 
+
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-size: 3rem;
+}
+.contenido {
+    background-color: #F53756;
+    padding: 5rem 0;
+  }
+  .contenido h3, .contenido p {
+    text-align: center;
+    color: #FFF;
+    font-family: var(--fuentePrincipal);
+  }
+  h3{
+    font-weight: 700;
+    font-size: 5rem;
+  }
+  .sub{
+    font-weight: 100;
+    font-size: 2rem;
+  }
+  .contenido .dia {
+    text-transform: uppercase;
+    margin: 5rem 0;
+    font-size: 4.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contenido-principal {
+      /* display: grid;
+      grid-template-columns: repeat(2, 1fr); */
+      gap: 5rem;
+      margin: auto 15rem;
+      text-align: center;
+    }
+  }
+  .contenido-principal p {
+    color: #000;
+  }
+  
+  .escenario {
+    padding-top: 2rem;
+  }
+  .nombre-escenario{
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+  }  
+  .ejercicios {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ejercicios li{
+    padding: 2.5rem;
+    font-weight: 700;
+  }
+  .ejercicios li span {
+    font-weight: 700;
+  }
+  a{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .bg-amarillo {
+    background-color: #FEF46D;
+  }
+  .bg-amarillo li:nth-child(odd) {
+    background-color: #fdee21;
+  }
+  
+  .bg-verde {
+    background-color: #4CB8B3;
+  }
